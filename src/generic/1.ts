@@ -16,12 +16,14 @@
 
 // export {};
 
-function getPromise<T>(): Promise<T> {
+function getPromise(): Promise<[string, number]> {
   return new Promise((resolve) => {
-    resolve(["Text", 50] as T);
+    resolve(["Text", 50]);
   });
 }
 
-getPromise<[string, number]>().then((data) => {
+getPromise().then((data) => {
   console.log(data);
 });
+
+export {};

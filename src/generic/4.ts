@@ -16,16 +16,12 @@
 
 // export {};
 
-interface ComponentProps {
-  // властивості, які очікується
-}
-
-class Component<T extends ComponentProps> {
-  constructor(public props: T) {}
-}
-
-class PageProps {
+interface PageProps {
   title: string;
+}
+
+class Component<T> {
+  constructor(public props: T) {}
 }
 
 class Page extends Component<PageProps> {
@@ -33,3 +29,5 @@ class Page extends Component<PageProps> {
     console.log(this.props.title);
   }
 }
+
+export {};
